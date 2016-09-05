@@ -14,15 +14,15 @@
 
 #### Installing Cloudbreak
   * Create seperate directory
-'''
+```
 mkdir cloudbreak
 cd cloudbreak
-'''
+```
   * Download and extract package
-'''
+```
 wget http://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_1.0.0_Linux_x86_64.tgz
 tar xvf cloudbreak-deployer_1.0.0_Linux_x86_64.tgz
-'''
+```
   * Copy cbd installer to /usr/local/bin (if not available then /usr/bin)
 `sudo cp cbd /usr/local/bin/`
 
@@ -40,10 +40,10 @@ tar xvf cloudbreak-deployer_1.0.0_Linux_x86_64.tgz
   * Retrieve and modify Cloudbreak URL user name and password
 `cbd login` This will output default credentials
   * Add following lines to Profile
-'''
+```
 export UAA_DEFAULT_USER_EMAIL=<user email>
 export UAA_DEFAULT_USER_PW=<password>
-'''
+```
   * Regenerate configuration with new Profile
 `cbd regenerate`
 
@@ -65,7 +65,7 @@ export UAA_DEFAULT_USER_PW=<password>
   2. Select IAM and **Create New Role**
   3. Select Role for Cross-Account access
   4. Add following policies:
-'''
+```
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -107,4 +107,4 @@ export UAA_DEFAULT_USER_PW=<password>
     }
   ]
 }
-'''
+```
